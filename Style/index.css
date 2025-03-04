@@ -2,10 +2,13 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: sans-serif;
     background-color: black;
+  
     color: white;
     text-align: center;
+    max-height: 800px;
+    height: 100%;
 
 }
 
@@ -17,13 +20,13 @@ body {
     padding: 20px;
     max-width: 800px;
     margin: 0 auto;
-   
+    
     
 }
 .head {
     font-size: 24px;
-    font-weight: bold;
-    margin-right: 50px;
+    margin-right: 20px;
+    font-family: baloo 2;
 }
 
 .nav ul {
@@ -43,33 +46,88 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
+    transition: color 0.3s ease;
     
 }
-.point {
-    color: rgb(108, 105, 105);
+nav ul li a:hover {
+    color: red;
 }
+
+.point {
+    font-size: 18px;
+    color: rgb(81, 76, 76);
+}
+
 main {
     max-width: 800px;
     margin: 0 auto;
     margin-top: 50px;
 }
+
 h1 {
-    font-size: 48px;
+    font-size: 84px;
     font-weight: bold;
     margin-bottom: 10px;
 }
 p {
-    font-size: 18px;
+    font-size: 22px;
     max-width: 600px;
     margin: 0 auto 30px;
+    padding: 20px;
 
 }
 .image-container {
+    display: flex;
     max-width: 800px;
     margin: 0 auto;
+    
 }
 .image-container img {
+    max-width: 800px;
+    max-height: 468px;
     width: 100%;
-    height: auto;
-    display: block;
+    padding: 30px;
+}
+@media screen and (max-width: 768px) {
+    .image-container img {
+       height: 617px;
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 500px) { 
+   main {
+   padding-top: 50px;
+   }
+    } 
+
+@media screen and (max-widt: 768px) {
+h1 {
+    font-size: 72px;
+}
+}
+@media screen and (max-width: 468px) {
+    .image-container img {
+       max-height: 300px;
+       height: auto;
+       width: 100%;
+       object-fit: cover;
+    }
+}  
+
+@media screen and (max-width: 468px) {
+    nav ul li:nth-child(-n+3) {
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width: 468px) {
+p {
+    font-size: 12px;
+}
+}
+@media screen and (max-width: 468px) {
+h1 {
+font-size: 36px;
+}
 }
