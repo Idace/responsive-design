@@ -98,7 +98,7 @@ p {
 }
 @media screen and (max-width: 768px) and (min-width: 468px) {
   .text {
-    width: 650px;
+    max-width: 650px;
     margin: 0 auto;
   }
 }
@@ -110,7 +110,7 @@ p {
 @media screen and (max-width: 468px) {
   .image-container img {
     max-height: 300px;
-    width: 280px;
+    max-width: 280px;
   }
 }
 
